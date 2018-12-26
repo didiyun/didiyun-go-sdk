@@ -16,7 +16,7 @@ go get github.com/didiyun/didiyun-go-sdk
 ## 使用滴滴云go sdk
 以下代码示例展示了调用滴滴云go sdk的四个主要步骤：
 
-1. 使用oauth2 Token验证方式，调用grpc.Dial获取一个*grpc.ClientConn。
+1. 使用oauth2 Token验证方式，调用grpc.Dial获取一个*grpc.ClientConn。
 2. 使用此ClientConn初始化需要访问的产品线Client。
 3. 组装请求体，并初始化context。
 4. 发起请求并处理应答或错误。
@@ -40,7 +40,7 @@ import (
 )
 
 const ServerAddr = "open.didiyunapi.com:8080"
-const Token = "your token" //您的API Token
+const Token = "your token" //您的API Token
 
 func main() {
 	perRPC := oauth.NewOauthAccess(&oauth2.Token{
@@ -132,7 +132,7 @@ type JobInfo struct {
 2. 对返回响应中的Done字段进行判断，若为false，则等待片刻重新轮询，若为true，表示任务完成，继续第3步。
 3. 判断success字段，若为true，表示任务操作成功，若为false，表示任务失败，此时可读取result字段查看错误信息。
 
-另外，我们在didiyun-go-sdk工程目录中简单实现了一个具有轮询任务功能的简易客户端`tests/common/client.go`，谨作参考。
+另外，我们在didiyun-go-sdk工程目录中简单实现了一个具有轮询任务功能的简易客户端`tests/common/client.go`，谨作参考。
 
 # 调用与错误示例
 对于滴滴云go sdk提供的所有接口，文件内均有调用示例，您可使用go test来运行每个接口的调用示例。（部分示例的正确运行需要您手动指定正确参数）。
