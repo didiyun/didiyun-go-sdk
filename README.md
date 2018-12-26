@@ -7,7 +7,7 @@
 * 滴滴云go sdk使用OAuth 2.0协议Bearer Token(RFC 6750)形式进行API访问授权。为使用滴滴云Go SDK，您需要为账号生成一个滴滴云API Token。您可在滴滴云控制台中的API Token管理页面上创建您的Token。
 
 ## 安装滴滴云go sdk
-执行以下命令，安装滴滴云go sdk。滴滴云go sdk依赖google grpc及protobuf3.x等package，已为您集成在vendor目录中，如有需要，您也可将其自行集成在您的工程项目文件中。
+执行以下命令，安装滴滴云go sdk。滴滴云go sdk依赖google grpc及protobuf3.x等package，已为您集成在vendor目录中，如有需要，您也可将其自行集成在您的工程项目文件中。
 
 ```
 go get github.com/didiyun/didiyun-go-sdk
@@ -144,7 +144,7 @@ cd $GOPATH/src/github.com/didiyun/didiyun-go-sdk/tests/compute/v1
 go test -v -run TestListDc2
 ```
 
-在调用失败时，您可以通过错误码（Errno）与错误信息（Errmsg）得到调用错误的原因，若无法解决，可联系[滴滴云技术支持](#https://help.didiyun.com/hc/request/new/)。
+在调用失败时，您可以通过错误码（Errno）与错误信息（Errmsg）得到调用错误的原因，若无法解决，可联系[滴滴云技术支持](#https://help.didiyun.com/hc/request/new/)。
 常见错误码如下：
 
 | 错误码  | 错误信息 |  描述  |
