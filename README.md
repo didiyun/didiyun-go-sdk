@@ -1,22 +1,22 @@
 # 快速开始 Getting Started
 
-滴滴云Golang开发者工具套件（didiyun-go-sdk）可让您在go语言环境下不用复杂编程即可访问滴滴云下计算产品线产品及账单类操作。本节介绍如何获取滴滴云go sdk并开始调用。
+滴滴云Golang开发者工具套件（didiyun-go-sdk）可让您在go语言环境下不用复杂编程即可访问滴滴云下计算产品线产品及账单类操作。本节介绍如何获取滴滴云go sdk并开始调用。
 
 ## 环境准备
-* 滴滴云go sdk基于golang语言，因此，本文默认您已安装golang的基本语言环境，将不再进行赘述。
-* 滴滴云go sdk使用OAuth 2.0协议Bearer Token(RFC 6750)形式进行API访问授权。为使用滴滴云Go SDK，您需要为账号生成一个滴滴云API Token。您可在滴滴云控制台中的API Token管理页面上创建您的Token。
+* 滴滴云go sdk基于golang语言，因此，本文默认您已安装golang的基本语言环境，将不再进行赘述。
+* 滴滴云go sdk使用OAuth 2.0协议Bearer Token(RFC 6750)形式进行API访问授权。为使用滴滴云Go SDK，您需要为账号生成一个滴滴云API Token。您可在滴滴云控制台中的API Token管理页面上创建您的Token。
 
 ## 安装滴滴云go sdk
-执行以下命令，安装滴滴云go sdk。滴滴云go sdk依赖google grpc及protobuf3.x等package，已为您集成在vendor目录中，如有需要，您也可将其自行集成在您的工程项目文件中。
+执行以下命令，安装滴滴云go sdk。滴滴云go sdk依赖google grpc及protobuf3.x等package，已为您集成在vendor目录中，如有需要，您也可将其自行集成在您的工程项目文件中。
 
 ```
 go get github.com/didiyun/didiyun-go-sdk
 ```
 
 ## 使用滴滴云go sdk
-以下代码示例展示了调用滴滴云go sdk的四个主要步骤：
+以下代码示例展示了调用滴滴云go sdk的四个主要步骤：
 
-1. 使用oauth2 Token验证方式，调用grpc.Dial获取一个*grpc.ClientConn。
+1. 使用oauth2 Token验证方式，调用grpc.Dial获取一个*grpc.ClientConn。
 2. 使用此ClientConn初始化需要访问的产品线Client。
 3. 组装请求体，并初始化context。
 4. 发起请求并处理应答或错误。
@@ -78,8 +78,8 @@ func main() {
 }
 ```
 
-# 返回结构与错误处理
-调用滴滴云go sdk中的所有Client的相应方法均会返回Response与一个go内置的error类型。其中，所有类型的Response均包含一个通用的滴滴云*Error类型和一个Data字段，如下所示。
+# 返回结构与错误处理
+调用滴滴云go sdk中的所有Client的相应方法均会返回Response与一个go内置的error类型。其中，所有类型的Response均包含一个通用的滴滴云*Error类型和一个Data字段，如下所示。
 
 ```
 type Error struct {
@@ -95,8 +95,8 @@ type ListDc2Response struct {
 ```
 
 滴滴云go sdk在服务端或者sdk端出错时，会返回相应的的错误信息。在调用结束时，建议您遵循以下步骤对调用响应进行处理：
-1. 对返回的内置error类型进行处理，确定sdk端的调用是否产生错误。
-2. 对返回响应中的Error中的Errno进行判断，如果不为0，表示服务端产生了错误。
+1. 对返回的内置error类型进行处理，确定sdk端的调用是否产生错误。
+2. 对返回响应中的Error中的Errno进行判断，如果不为0，表示服务端产生了错误。
 3. 若没有错误，处理返回响应中的Data部分。
 
 ```
@@ -105,7 +105,7 @@ if err != nil {
     //异常处理，代表sdk端的调用出现error，包括但不限于网络断开、超时等错误
     panic(err)
 } else if out.Error.Errno != 0 {
-    //返回的Errno不为0，表示服务端出现错误，根据Errno与Errmsg有多种错误
+    //返回的Errno不为0，表示服务端出现错误，根据Errno与Errmsg有多种错误
     panic(out.Error.Errmsg)
 }
 ```
@@ -125,14 +125,14 @@ type JobInfo struct {
 }
 ```
 
-您需要初始化CommonClient，并调用JobResult方法，通过jobUuid来轮询获取此任务的进度。
-其中，Done字段表示服务端是否还在处理此任务，Success字段表示处理结果是否成功。
-建议您遵循以下步骤对异步任务进行处理：
-1. 先判断调用响应是否有错误。
-2. 对返回响应中的Done字段进行判断，若为false，则等待片刻重新轮询，若为true，表示任务完成，继续第3步。
-3. 判断success字段，若为true，表示任务操作成功，若为false，表示任务失败，此时可读取result字段查看错误信息。
+您需要初始化CommonClient，并调用JobResult方法，通过jobUuid来轮询获取此任务的进度。
+其中，Done字段表示服务端是否还在处理此任务，Success字段表示处理结果是否成功。
+建议您遵循以下步骤对异步任务进行处理：
+1. 先判断调用响应是否有错误。
+2. 对返回响应中的Done字段进行判断，若为false，则等待片刻重新轮询，若为true，表示任务完成，继续第3步。
+3. 判断success字段，若为true，表示任务操作成功，若为false，表示任务失败，此时可读取result字段查看错误信息。
 
-另外，我们在didiyun-go-sdk工程目录中简单实现了一个具有轮询任务功能的简易客户端`tests/common/client.go`，谨作参考。
+另外，我们在didiyun-go-sdk工程目录中简单实现了一个具有轮询任务功能的简易客户端`tests/common/client.go`，谨作参考。
 
 # 调用与错误示例
 对于滴滴云go sdk提供的所有接口，文件内均有调用示例，您可使用go test来运行每个接口的调用示例。（部分示例的正确运行需要您手动指定正确参数）。
