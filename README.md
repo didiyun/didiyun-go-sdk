@@ -145,7 +145,7 @@ go test -v -run TestListDc2
 ```
 
 在调用失败时，您可以通过错误码（Errno）与错误信息（Errmsg）得到调用错误的原因，若无法解决，可联系[滴滴云技术支持](#https://help.didiyun.com/hc/request/new/)。
-常见错误码如下：
+常见错误码如下：
 
 | 错误码  | 错误信息 |  描述  |
 |-----|-----|-----|
