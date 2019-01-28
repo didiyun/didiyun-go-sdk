@@ -178,6 +178,12 @@ type JobInfo struct {
 | UDP协议 | UDP |
 | ICMP协议 | ICMP |
 
+## 安全组规则类型（type）
+在滴滴云go sdk中，在安全组产品中，安全组规则类型机器对应`type`字段共有以下两种。
+| 安全组规则类型 | type |
+| 入方向 | Ingress |
+| 出方向 | Egress |
+
 ## 地域Id与可用区Id（regionId&zoneId）
 在滴滴云go sdk中，如未进行特殊说明，名为`regionId`与`zoneId`的字段均遵循以下规则。
 目前
