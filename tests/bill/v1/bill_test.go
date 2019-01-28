@@ -35,18 +35,11 @@ func TestCheckDc2Price(t *testing.T) {
 	defer cancel()
 	in := &CheckDc2PriceRequest{
 		Header: &base.Header{RegionId: "gz"},
+		IsChange: true,
 		Dc2Goods: &CheckDc2PriceInput{
 			PayPeriod: 1,
-			Dc2Model:  "dc2.s1.large4.d40",
-			Eip: &CheckEipPriceInput{
-				Bandwidth: 12,
-			},
-			Ebs: []*CheckEbsPriceInput{
-				{
-					Size:     30,
-					DiskType: "SSD",
-				},
-			},
+			Dc2Model:  "dc2.e1.large4",
+			Dc2Uuid:"92cd0ec57d3455ecb457b16096e9024c",
 		},
 	}
 	out, err := GetBillClient().CheckDc2Price(ctx, in)

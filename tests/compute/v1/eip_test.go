@@ -70,7 +70,7 @@ func TestCreateEip(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	for _, job := range result {
 		eipUuids = append(eipUuids, job.ResourceUuid)
@@ -94,7 +94,7 @@ func TestDetachEipFromDc2(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -116,7 +116,7 @@ func TestAttachEipToDc2(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -139,7 +139,7 @@ func TestChangeEipBandwidth(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -162,7 +162,7 @@ func TestDeleteEip(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {

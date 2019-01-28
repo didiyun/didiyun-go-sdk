@@ -120,7 +120,7 @@ func TestCreateDc2(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	for _, job := range result {
 		dc2Uuid = job.ResourceUuid
 	}
@@ -147,7 +147,7 @@ func TestChangeDc2Spec(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -170,7 +170,7 @@ func TestStartDc2(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -193,7 +193,7 @@ func TestStopDc2(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -216,7 +216,7 @@ func TestRebootDc2(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -245,7 +245,7 @@ func TestReinstallDc2System(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -272,7 +272,7 @@ func TestChangeDc2Password(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -296,7 +296,7 @@ func TestChangeDc2Name(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 }
@@ -317,7 +317,7 @@ func TestDestroyDc2(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
