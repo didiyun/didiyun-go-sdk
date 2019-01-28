@@ -37,7 +37,7 @@ func TestCheckDc2Price(t *testing.T) {
 		Header: &base.Header{RegionId: "gz"},
 		Dc2Goods: &CheckDc2PriceInput{
 			PayPeriod: 1,
-			Dc2Model:  "dc2.s1.large4.d20",
+			Dc2Model:  "dc2.s1.large4.d40",
 			Eip: &CheckEipPriceInput{
 				Bandwidth: 12,
 			},
