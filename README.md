@@ -181,6 +181,7 @@ type JobInfo struct {
 ## 安全组规则类型（type）
 在滴滴云go sdk中，在安全组产品中，安全组规则类型机器对应`type`字段共有以下两种。
 | 安全组规则类型 | type |
+| ---- | ---- |
 | 入方向 | Ingress |
 | 出方向 | Egress |
 
