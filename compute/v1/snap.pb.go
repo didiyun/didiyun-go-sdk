@@ -47,7 +47,7 @@ func (m *ListSnapshotRequest) Reset()         { *m = ListSnapshotRequest{} }
 func (m *ListSnapshotRequest) String() string { return proto.CompactTextString(m) }
 func (*ListSnapshotRequest) ProtoMessage()    {}
 func (*ListSnapshotRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{0}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{0}
 }
 func (m *ListSnapshotRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListSnapshotRequest.Unmarshal(m, b)
@@ -115,7 +115,7 @@ func (m *ListSnapshotCondition) Reset()         { *m = ListSnapshotCondition{} }
 func (m *ListSnapshotCondition) String() string { return proto.CompactTextString(m) }
 func (*ListSnapshotCondition) ProtoMessage()    {}
 func (*ListSnapshotCondition) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{1}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{1}
 }
 func (m *ListSnapshotCondition) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListSnapshotCondition.Unmarshal(m, b)
@@ -168,7 +168,7 @@ func (m *ListSnapshotResponse) Reset()         { *m = ListSnapshotResponse{} }
 func (m *ListSnapshotResponse) String() string { return proto.CompactTextString(m) }
 func (*ListSnapshotResponse) ProtoMessage()    {}
 func (*ListSnapshotResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{2}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{2}
 }
 func (m *ListSnapshotResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ListSnapshotResponse.Unmarshal(m, b)
@@ -216,7 +216,7 @@ func (m *GetSnapshotTotalCntRequest) Reset()         { *m = GetSnapshotTotalCntR
 func (m *GetSnapshotTotalCntRequest) String() string { return proto.CompactTextString(m) }
 func (*GetSnapshotTotalCntRequest) ProtoMessage()    {}
 func (*GetSnapshotTotalCntRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{3}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{3}
 }
 func (m *GetSnapshotTotalCntRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetSnapshotTotalCntRequest.Unmarshal(m, b)
@@ -276,7 +276,7 @@ func (m *GetSnapshotTotalCntResponse) Reset()         { *m = GetSnapshotTotalCnt
 func (m *GetSnapshotTotalCntResponse) String() string { return proto.CompactTextString(m) }
 func (*GetSnapshotTotalCntResponse) ProtoMessage()    {}
 func (*GetSnapshotTotalCntResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{4}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{4}
 }
 func (m *GetSnapshotTotalCntResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetSnapshotTotalCntResponse.Unmarshal(m, b)
@@ -324,7 +324,7 @@ func (m *CreateSnapshotRequest) Reset()         { *m = CreateSnapshotRequest{} }
 func (m *CreateSnapshotRequest) String() string { return proto.CompactTextString(m) }
 func (*CreateSnapshotRequest) ProtoMessage()    {}
 func (*CreateSnapshotRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{5}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{5}
 }
 func (m *CreateSnapshotRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateSnapshotRequest.Unmarshal(m, b)
@@ -384,7 +384,7 @@ func (m *CreateSnapshotResponse) Reset()         { *m = CreateSnapshotResponse{}
 func (m *CreateSnapshotResponse) String() string { return proto.CompactTextString(m) }
 func (*CreateSnapshotResponse) ProtoMessage()    {}
 func (*CreateSnapshotResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{6}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{6}
 }
 func (m *CreateSnapshotResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_CreateSnapshotResponse.Unmarshal(m, b)
@@ -430,7 +430,7 @@ func (m *DeleteSnapshotRequest) Reset()         { *m = DeleteSnapshotRequest{} }
 func (m *DeleteSnapshotRequest) String() string { return proto.CompactTextString(m) }
 func (*DeleteSnapshotRequest) ProtoMessage()    {}
 func (*DeleteSnapshotRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{7}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{7}
 }
 func (m *DeleteSnapshotRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteSnapshotRequest.Unmarshal(m, b)
@@ -475,7 +475,7 @@ func (m *DeleteSnapshotRequest_Input) Reset()         { *m = DeleteSnapshotReque
 func (m *DeleteSnapshotRequest_Input) String() string { return proto.CompactTextString(m) }
 func (*DeleteSnapshotRequest_Input) ProtoMessage()    {}
 func (*DeleteSnapshotRequest_Input) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{7, 0}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{7, 0}
 }
 func (m *DeleteSnapshotRequest_Input) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteSnapshotRequest_Input.Unmarshal(m, b)
@@ -514,7 +514,7 @@ func (m *DeleteSnapshotResponse) Reset()         { *m = DeleteSnapshotResponse{}
 func (m *DeleteSnapshotResponse) String() string { return proto.CompactTextString(m) }
 func (*DeleteSnapshotResponse) ProtoMessage()    {}
 func (*DeleteSnapshotResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{8}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{8}
 }
 func (m *DeleteSnapshotResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteSnapshotResponse.Unmarshal(m, b)
@@ -562,7 +562,7 @@ func (m *RevertSnapshotRequest) Reset()         { *m = RevertSnapshotRequest{} }
 func (m *RevertSnapshotRequest) String() string { return proto.CompactTextString(m) }
 func (*RevertSnapshotRequest) ProtoMessage()    {}
 func (*RevertSnapshotRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{9}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{9}
 }
 func (m *RevertSnapshotRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RevertSnapshotRequest.Unmarshal(m, b)
@@ -621,7 +621,7 @@ func (m *RevertSnapshotRequest_Input) Reset()         { *m = RevertSnapshotReque
 func (m *RevertSnapshotRequest_Input) String() string { return proto.CompactTextString(m) }
 func (*RevertSnapshotRequest_Input) ProtoMessage()    {}
 func (*RevertSnapshotRequest_Input) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{9, 0}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{9, 0}
 }
 func (m *RevertSnapshotRequest_Input) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RevertSnapshotRequest_Input.Unmarshal(m, b)
@@ -660,7 +660,7 @@ func (m *RevertSnapshotResponse) Reset()         { *m = RevertSnapshotResponse{}
 func (m *RevertSnapshotResponse) String() string { return proto.CompactTextString(m) }
 func (*RevertSnapshotResponse) ProtoMessage()    {}
 func (*RevertSnapshotResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{10}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{10}
 }
 func (m *RevertSnapshotResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RevertSnapshotResponse.Unmarshal(m, b)
@@ -708,7 +708,7 @@ func (m *ChangeSnapshotNameRequest) Reset()         { *m = ChangeSnapshotNameReq
 func (m *ChangeSnapshotNameRequest) String() string { return proto.CompactTextString(m) }
 func (*ChangeSnapshotNameRequest) ProtoMessage()    {}
 func (*ChangeSnapshotNameRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{11}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{11}
 }
 func (m *ChangeSnapshotNameRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ChangeSnapshotNameRequest.Unmarshal(m, b)
@@ -768,7 +768,7 @@ func (m *ChangeSnapshotNameRequest_Input) Reset()         { *m = ChangeSnapshotN
 func (m *ChangeSnapshotNameRequest_Input) String() string { return proto.CompactTextString(m) }
 func (*ChangeSnapshotNameRequest_Input) ProtoMessage()    {}
 func (*ChangeSnapshotNameRequest_Input) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{11, 0}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{11, 0}
 }
 func (m *ChangeSnapshotNameRequest_Input) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ChangeSnapshotNameRequest_Input.Unmarshal(m, b)
@@ -814,7 +814,7 @@ func (m *ChangeSnapshotNameResponse) Reset()         { *m = ChangeSnapshotNameRe
 func (m *ChangeSnapshotNameResponse) String() string { return proto.CompactTextString(m) }
 func (*ChangeSnapshotNameResponse) ProtoMessage()    {}
 func (*ChangeSnapshotNameResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_snap_23ac0fddd7b4969d, []int{12}
+	return fileDescriptor_snap_b4d58fd4c65657fc, []int{12}
 }
 func (m *ChangeSnapshotNameResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ChangeSnapshotNameResponse.Unmarshal(m, b)
@@ -1116,9 +1116,9 @@ var _Snap_serviceDesc = grpc.ServiceDesc{
 	Metadata: "compute/v1/snap.proto",
 }
 
-func init() { proto.RegisterFile("compute/v1/snap.proto", fileDescriptor_snap_23ac0fddd7b4969d) }
+func init() { proto.RegisterFile("compute/v1/snap.proto", fileDescriptor_snap_b4d58fd4c65657fc) }
 
-var fileDescriptor_snap_23ac0fddd7b4969d = []byte{
+var fileDescriptor_snap_b4d58fd4c65657fc = []byte{
 	// 858 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x97, 0xbd, 0x6f, 0xfb, 0x44,
 	0x18, 0xc7, 0x75, 0x79, 0xe9, 0xcb, 0x15, 0x31, 0x5c, 0x9b, 0x36, 0x75, 0x91, 0x9a, 0xba, 0x42,
@@ -1161,17 +1161,17 @@ var fileDescriptor_snap_23ac0fddd7b4969d = []byte{
 	0x05, 0x68, 0xbc, 0xb1, 0x50, 0x6e, 0x32, 0x29, 0xf3, 0xe8, 0xfb, 0x7f, 0xfe, 0xfb, 0xa9, 0x76,
 	0x60, 0xee, 0xfb, 0x54, 0x17, 0xd8, 0xd4, 0x16, 0x92, 0x47, 0x38, 0x20, 0xfa, 0xcd, 0x49, 0xe5,
 	0xda, 0x13, 0x2a, 0x24, 0xfa, 0x0d, 0xc0, 0xcd, 0x92, 0x03, 0x07, 0xf5, 0x2b, 0xd4, 0xaa, 0xcf,
-	0x4f, 0xc3, 0xb9, 0x4f, 0x49, 0xea, 0xb3, 0xab, 0x7d, 0x9a, 0xa8, 0x73, 0x87, 0x4f, 0x8f, 0xc7,
-	0x4c, 0xa2, 0x9f, 0x01, 0x7c, 0xb9, 0xd8, 0xf2, 0x51, 0xd5, 0xfb, 0x4e, 0xe9, 0xb1, 0x65, 0xf4,
-	0x16, 0xcc, 0x4e, 0x9d, 0xbd, 0xa6, 0x9d, 0x1d, 0x9a, 0x07, 0x77, 0x38, 0xc3, 0x42, 0xd0, 0x80,
-	0x69, 0x6b, 0xc5, 0xb6, 0x5a, 0x69, 0xad, 0xb4, 0x8f, 0x57, 0x5a, 0x2b, 0xef, 0xd5, 0x0b, 0x59,
-	0xf3, 0x75, 0xa9, 0xb6, 0x56, 0x6c, 0x42, 0x95, 0xd6, 0x4a, 0x7b, 0x65, 0xa5, 0xb5, 0xf2, 0xce,
-	0xb6, 0x90, 0xb5, 0x48, 0x97, 0xa2, 0xdf, 0x01, 0x44, 0x2f, 0x3e, 0x96, 0xe8, 0xad, 0xfb, 0x76,
-	0x16, 0xa3, 0x7f, 0x8f, 0x8a, 0xd4, 0x66, 0x4f, 0xdb, 0x3c, 0x32, 0x5f, 0xbd, 0x6b, 0xdb, 0xe9,
-	0x72, 0x55, 0xf6, 0xde, 0x35, 0x80, 0xdb, 0x1e, 0x9f, 0x6a, 0x9d, 0xab, 0x98, 0xe5, 0x44, 0x3e,
-	0x05, 0x5f, 0xbe, 0x1d, 0x50, 0x39, 0x8e, 0x47, 0xea, 0xa2, 0x9d, 0x26, 0x64, 0xbf, 0xbd, 0x80,
-	0xf7, 0x84, 0xff, 0x95, 0x7d, 0xf3, 0xd5, 0xf1, 0x6e, 0xfa, 0xf7, 0x19, 0x00, 0x7f, 0xd4, 0x76,
-	0x86, 0xca, 0xf7, 0x30, 0xb1, 0x60, 0x0d, 0xd2, 0x9b, 0x9e, 0xf7, 0xff, 0x4e, 0x46, 0x2e, 0xd2,
-	0x91, 0x8b, 0x74, 0xe4, 0xe2, 0xbc, 0x3f, 0x5a, 0xd1, 0x1f, 0x24, 0xc7, 0xcf, 0x03, 0x00, 0x00,
-	0xff, 0xff, 0xf9, 0x56, 0x8f, 0x9f, 0x0b, 0x0d, 0x00, 0x00,
+	0x4f, 0xc3, 0xb9, 0x4f, 0x49, 0xea, 0xb3, 0xab, 0x7d, 0x9a, 0x66, 0xe7, 0x0e, 0x9f, 0x1e, 0x8f,
+	0x99, 0x44, 0x3f, 0x03, 0xf8, 0x72, 0xb1, 0xe5, 0xa3, 0xaa, 0xf7, 0x9d, 0xd2, 0x63, 0xcb, 0xe8,
+	0x2d, 0x98, 0x9d, 0x3a, 0x7b, 0x4d, 0x3b, 0x3b, 0x34, 0x0f, 0xee, 0x70, 0x86, 0x85, 0xa0, 0x01,
+	0xd3, 0xd6, 0x8a, 0x6d, 0xb5, 0xd2, 0x5a, 0x69, 0x1f, 0xaf, 0xb4, 0x56, 0xde, 0xab, 0x17, 0xb2,
+	0xe6, 0xeb, 0x52, 0x6d, 0xad, 0xd8, 0x84, 0x2a, 0xad, 0x95, 0xf6, 0xca, 0x4a, 0x6b, 0xe5, 0x9d,
+	0x6d, 0x21, 0x6b, 0x91, 0x2e, 0x45, 0xbf, 0x03, 0x88, 0x5e, 0x7c, 0x2c, 0xd1, 0x5b, 0xf7, 0xed,
+	0x2c, 0x46, 0xff, 0x1e, 0x15, 0xa9, 0xcd, 0x9e, 0xb6, 0x79, 0x64, 0xbe, 0x7a, 0xd7, 0xb6, 0xd3,
+	0xe5, 0xaa, 0xec, 0xbd, 0x6b, 0x00, 0xb7, 0x3d, 0x3e, 0xd5, 0x3a, 0x57, 0x31, 0xcb, 0x89, 0x7c,
+	0x0a, 0xbe, 0x7c, 0x3b, 0xa0, 0x72, 0x1c, 0x8f, 0xd4, 0x45, 0x3b, 0x4d, 0xc8, 0x7e, 0x7b, 0x01,
+	0xef, 0x09, 0xff, 0x2b, 0xfb, 0xe6, 0xab, 0xe3, 0xdd, 0xf4, 0xef, 0x33, 0x00, 0xfe, 0xa8, 0xed,
+	0x0c, 0x95, 0xef, 0x61, 0x62, 0xc1, 0x1a, 0xa4, 0x37, 0x3d, 0xef, 0xff, 0x9d, 0x8c, 0x5c, 0xa4,
+	0x23, 0x17, 0xe9, 0xc8, 0xc5, 0x79, 0x7f, 0xb4, 0xa2, 0x3f, 0x48, 0x8e, 0x9f, 0x07, 0x00, 0x00,
+	0xff, 0xff, 0x6a, 0x2d, 0xbb, 0x45, 0x0b, 0x0d, 0x00, 0x00,
 }
