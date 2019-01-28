@@ -73,7 +73,7 @@ func TestCreateSg(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	for _, job := range result {
 		sgUuid = job.ResourceUuid
@@ -97,7 +97,7 @@ func TestDeleteSg(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 }
@@ -116,7 +116,7 @@ func TestChangeSgName(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -140,7 +140,7 @@ func TestAttachDc2ToSg(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 }
@@ -161,7 +161,7 @@ func TestDetachDc2FromSg(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 }
@@ -221,7 +221,7 @@ func TestCreateSgRule(t *testing.T) {
 	panicErr(err)
 	panicError(out.Error)
 	fmt.Println(c.ToPrettyJsonString(out))
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -244,7 +244,7 @@ func TestDeleteSgRule(t *testing.T) {
 	panicErr(err)
 	panicError(out.Error)
 	fmt.Println(c.ToPrettyJsonString(out))
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {

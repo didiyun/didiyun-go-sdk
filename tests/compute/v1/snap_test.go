@@ -49,15 +49,15 @@ func TestCreateSnap(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*1200)
 	defer cancel()
 	in := &CreateSnapshotRequest{
-		Header:   &base.Header{RegionId: "gz"},
-		Dc2Uuid:  dc2Uuid,
+		Header:   &base.Header{RegionId: "pre"},
+		Dc2Uuid:  "cf0fe02457a455108e18c655060ed25f",
 		SnapName: "test-create-snap",
 	}
 	out, err := iaasCli.CreateSnapshot(ctx, in)
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	for _, job := range result {
 		snapUuid = job.ResourceUuid
 	}
@@ -81,7 +81,7 @@ func TestDeleteSnap(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -102,7 +102,7 @@ func TestRevertSnap(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -124,7 +124,7 @@ func TestChangeSnapshotName(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {

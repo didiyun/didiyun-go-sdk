@@ -38,7 +38,7 @@ type DicloudClient struct {
 	compute.VpcClient
 }
 
-func (cli *DicloudClient) WaitForJobResult(ctx context.Context, jobUuids ...string) (allSuccess bool, resourceJobMap map[string]*base.JobInfo, err error) {
+func (cli *DicloudClient) WaitForJobResult(ctx context.Context, regionId string, jobUuids ...string) (allSuccess bool, resourceJobMap map[string]*base.JobInfo, err error) {
 	var out *compute.JobResultResponse
 	allSuccess = true
 	resourceJobMap = make(map[string]*base.JobInfo)
@@ -46,7 +46,7 @@ func (cli *DicloudClient) WaitForJobResult(ctx context.Context, jobUuids ...stri
 		time.Sleep(3 * time.Second)
 		fmt.Println("Querying JobResult... times: ", cnt)
 		out, err = cli.JobResult(ctx, &compute.JobResultRequest{
-			Header:   &base.Header{RegionId: "gz"},
+			Header:   &base.Header{RegionId: regionId},
 			JobUuids: jobUuids,
 		})
 		if err != nil {

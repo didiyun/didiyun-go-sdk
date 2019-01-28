@@ -71,7 +71,7 @@ func TestCreateEbs(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	for _, job := range result {
 		ebsUuids = append(ebsUuids, job.ResourceUuid)
 	}
@@ -95,7 +95,7 @@ func TestDetachEbsFromDc2(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -117,7 +117,7 @@ func TestAttachEbsToDc2(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -139,7 +139,7 @@ func TestChangeEbsSize(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -161,7 +161,7 @@ func TestChangeEbsName(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
@@ -182,7 +182,7 @@ func TestDeleteEbs(t *testing.T) {
 	fmt.Println(c.ToPrettyJsonString(out))
 	panicErr(err)
 	panicError(out.Error)
-	success, result, err := iaasCli.WaitForJobResult(ctx, getJobUuids(out.Data)...) //轮询查询进度
+	success, result, err := iaasCli.WaitForJobResult(ctx, "gz", getJobUuids(out.Data)...) //轮询查询进度
 	panicErr(err)
 	fmt.Println("Success: ", success, "result: ", result)
 	if !success {
