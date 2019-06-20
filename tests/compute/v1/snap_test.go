@@ -49,8 +49,8 @@ func TestCreateSnap(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*1200)
 	defer cancel()
 	in := &CreateSnapshotRequest{
-		Header:   &base.Header{RegionId: "pre"},
-		Dc2Uuid:  "cf0fe02457a455108e18c655060ed25f",
+		Header:   &base.Header{RegionId: "gz"},
+		Dc2Uuid:  dc2Uuid,
 		SnapName: "test-create-snap",
 	}
 	out, err := iaasCli.CreateSnapshot(ctx, in)

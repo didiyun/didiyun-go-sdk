@@ -8,6 +8,7 @@ import (
 	"github.com/didiyun/didiyun-go-sdk/base/v1"
 	"github.com/didiyun/didiyun-go-sdk/bill/v1"
 	"github.com/didiyun/didiyun-go-sdk/compute/v1"
+	"github.com/didiyun/didiyun-go-sdk/monitor/v1"
 	"time"
 )
 
@@ -24,6 +25,7 @@ func InitDicloudClient() *DicloudClient {
 		SgClient:     compute.NewSgClient(conn),
 		SnapClient:   compute.NewSnapClient(conn),
 		VpcClient:    compute.NewVpcClient(conn),
+		MonitorClient: monitor.NewMonitorClient(conn),
 	}
 }
 
@@ -36,6 +38,7 @@ type DicloudClient struct {
 	compute.SgClient
 	compute.SnapClient
 	compute.VpcClient
+	monitor.MonitorClient
 }
 
 func (cli *DicloudClient) WaitForJobResult(ctx context.Context, regionId string, jobUuids ...string) (allSuccess bool, resourceJobMap map[string]*base.JobInfo, err error) {
