@@ -22,6 +22,11 @@ var (
 	ebsUuids              []string
 	pubKeyUuid            string
 	snapUuid              string
+	slbUuid				  string
+	slbListenerUuid       string
+	poolUuid		      string
+	poolMemberUuid        string
+	slbAlgorithm          string
 )
 
 func TestAll(t *testing.T) {
@@ -219,4 +224,22 @@ func TestAll(t *testing.T) {
 
 	//step 62. DeleteVpc
 	TestDeleteVpc(t)
+}
+
+func TestSlb (t *testing.T) {
+	TestGetSlbAlgorithm(t)
+	TestCreateSLB(t)
+	TestListSLB(t)
+	TestChangeSLBName(t)
+	TestCreateSLBListener(t)
+	TestGetSLBByUuid(t)
+	TestGetSLBTotalCnt(t)
+	TestListSLBListener(t)
+	TestUpdateSLBListener(t)
+	TestAddSLBMemberToPool(t)
+	TestUpdateSLBMember(t)
+	TestListPoolMembers(t)
+	TestDeleteSLBMember(t)
+	TestDeleteSLBListener(t)
+	TestDeleteSLB(t)
 }

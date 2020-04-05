@@ -619,7 +619,9 @@ func init() {
 	proto.RegisterType((*CounterDataValue)(nil), "didi.cloud.monitor.v1.CounterDataValue")
 }
 
-func init() { proto.RegisterFile("monitor/v1/counter.proto", fileDescriptor_d10d6d62cf52a45f) }
+func init() {
+	proto.RegisterFile("monitor/v1/counter.proto", fileDescriptor_d10d6d62cf52a45f)
+}
 
 var fileDescriptor_d10d6d62cf52a45f = []byte{
 	// 749 bytes of a gzipped FileDescriptorProto
@@ -674,11 +676,11 @@ var fileDescriptor_d10d6d62cf52a45f = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // MonitorClient is the client API for Monitor service.
 //
@@ -690,10 +692,10 @@ type MonitorClient interface {
 }
 
 type monitorClient struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewMonitorClient(cc *grpc.ClientConn) MonitorClient {
+func NewMonitorClient(cc grpc.ClientConnInterface) MonitorClient {
 	return &monitorClient{cc}
 }
 

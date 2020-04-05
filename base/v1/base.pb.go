@@ -395,7 +395,9 @@ func init() {
 	proto.RegisterType((*RegionAndZoneInfo)(nil), "didi.cloud.base.v1.RegionAndZoneInfo")
 }
 
-func init() { proto.RegisterFile("base/v1/base.proto", fileDescriptor_609c3acb0f815e11) }
+func init() {
+	proto.RegisterFile("base/v1/base.proto", fileDescriptor_609c3acb0f815e11)
+}
 
 var fileDescriptor_609c3acb0f815e11 = []byte{
 	// 448 bytes of a gzipped FileDescriptorProto

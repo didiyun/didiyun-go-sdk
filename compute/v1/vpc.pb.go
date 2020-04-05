@@ -1802,7 +1802,9 @@ func init() {
 	proto.RegisterType((*IsOverlapOutput)(nil), "didi.cloud.compute.v1.IsOverlapOutput")
 }
 
-func init() { proto.RegisterFile("compute/v1/vpc.proto", fileDescriptor_a9f908e3cf0b76b8) }
+func init() {
+	proto.RegisterFile("compute/v1/vpc.proto", fileDescriptor_a9f908e3cf0b76b8)
+}
 
 var fileDescriptor_a9f908e3cf0b76b8 = []byte{
 	// 1380 bytes of a gzipped FileDescriptorProto
@@ -1897,11 +1899,11 @@ var fileDescriptor_a9f908e3cf0b76b8 = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // VpcClient is the client API for Vpc service.
 //
@@ -1938,10 +1940,10 @@ type VpcClient interface {
 }
 
 type vpcClient struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewVpcClient(cc *grpc.ClientConn) VpcClient {
+func NewVpcClient(cc grpc.ClientConnInterface) VpcClient {
 	return &vpcClient{cc}
 }
 

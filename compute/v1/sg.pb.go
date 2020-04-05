@@ -1731,7 +1731,9 @@ func init() {
 	proto.RegisterType((*DeleteSgRuleResponse)(nil), "didi.cloud.compute.v1.DeleteSgRuleResponse")
 }
 
-func init() { proto.RegisterFile("compute/v1/sg.proto", fileDescriptor_96e068b6c04d04c3) }
+func init() {
+	proto.RegisterFile("compute/v1/sg.proto", fileDescriptor_96e068b6c04d04c3)
+}
 
 var fileDescriptor_96e068b6c04d04c3 = []byte{
 	// 1318 bytes of a gzipped FileDescriptorProto
@@ -1822,11 +1824,11 @@ var fileDescriptor_96e068b6c04d04c3 = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // SgClient is the client API for Sg service.
 //
@@ -1857,10 +1859,10 @@ type SgClient interface {
 }
 
 type sgClient struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewSgClient(cc *grpc.ClientConn) SgClient {
+func NewSgClient(cc grpc.ClientConnInterface) SgClient {
 	return &sgClient{cc}
 }
 

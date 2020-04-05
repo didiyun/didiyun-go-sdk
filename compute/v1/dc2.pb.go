@@ -2675,7 +2675,9 @@ func init() {
 	proto.RegisterType((*DeleteSshKeyResponse)(nil), "didi.cloud.compute.v1.DeleteSshKeyResponse")
 }
 
-func init() { proto.RegisterFile("compute/v1/dc2.proto", fileDescriptor_2105e6a61d0e9cf2) }
+func init() {
+	proto.RegisterFile("compute/v1/dc2.proto", fileDescriptor_2105e6a61d0e9cf2)
+}
 
 var fileDescriptor_2105e6a61d0e9cf2 = []byte{
 	// 2137 bytes of a gzipped FileDescriptorProto
@@ -2817,11 +2819,11 @@ var fileDescriptor_2105e6a61d0e9cf2 = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // Dc2Client is the client API for Dc2 service.
 //
@@ -2862,10 +2864,10 @@ type Dc2Client interface {
 }
 
 type dc2Client struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewDc2Client(cc *grpc.ClientConn) Dc2Client {
+func NewDc2Client(cc grpc.ClientConnInterface) Dc2Client {
 	return &dc2Client{cc}
 }
 

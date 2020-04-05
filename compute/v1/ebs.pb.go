@@ -1266,7 +1266,9 @@ func init() {
 	proto.RegisterType((*ChangeEbsNameResponse)(nil), "didi.cloud.compute.v1.ChangeEbsNameResponse")
 }
 
-func init() { proto.RegisterFile("compute/v1/ebs.proto", fileDescriptor_b3bd84a367683e92) }
+func init() {
+	proto.RegisterFile("compute/v1/ebs.proto", fileDescriptor_b3bd84a367683e92)
+}
 
 var fileDescriptor_b3bd84a367683e92 = []byte{
 	// 1058 bytes of a gzipped FileDescriptorProto
@@ -1341,11 +1343,11 @@ var fileDescriptor_b3bd84a367683e92 = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // EbsClient is the client API for Ebs service.
 //
@@ -1372,10 +1374,10 @@ type EbsClient interface {
 }
 
 type ebsClient struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewEbsClient(cc *grpc.ClientConn) EbsClient {
+func NewEbsClient(cc grpc.ClientConnInterface) EbsClient {
 	return &ebsClient{cc}
 }
 
