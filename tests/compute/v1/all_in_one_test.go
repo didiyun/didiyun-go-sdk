@@ -22,6 +22,11 @@ var (
 	ebsUuids              []string
 	pubKeyUuid            string
 	snapUuid              string
+	slbUuid				  string
+	slbListenerUuid       string
+	poolUuid		      string
+	poolMemberUuid        string
+	slbAlgorithm          string
 )
 
 func TestAll(t *testing.T) {
@@ -219,4 +224,69 @@ func TestAll(t *testing.T) {
 
 	//step 62. DeleteVpc
 	TestDeleteVpc(t)
+
+	//step 63. GetSlbAlgorithm
+	TestGetSlbAlgorithm(t)
+
+	//step 64. CreateSLB
+	TestCreateSLB(t)
+
+	//step 65. ListSLB
+	TestListSLB(t)
+
+	//step 66. ChangeSLBName
+	TestChangeSLBName(t)
+
+	//step 67. CreateSLBListener
+	TestCreateSLBListener(t)
+
+	//step 68. GetSLBByUuid
+	TestGetSLBByUuid(t)
+
+	//step 69. GetSLBTotalCnt
+	TestGetSLBTotalCnt(t)
+
+	//step 70. ListSLBListener
+	TestListSLBListener(t)
+
+	//step 71. UpdateSLBListener
+	TestUpdateSLBListener(t)
+
+	//step 72. AddSLBMemberToPool
+	TestAddSLBMemberToPool(t)
+
+	//step 73. UpdateSLBMember
+	TestUpdateSLBMember(t)
+
+	//step 74. ListPoolMembers
+	TestListPoolMembers(t)
+
+	//step 75. DeleteSLBMember
+	TestDeleteSLBMember(t)
+
+	//step 76. DeleteSLBListener
+	TestDeleteSLBListener(t)
+
+	//step 77. DeleteSLB
+	TestDeleteSLB(t)
+}
+
+func TestSlb (t *testing.T) {
+	vpcUuid = ""
+	dc2Uuid = ""
+	TestGetSlbAlgorithm(t)
+	TestCreateSLB(t)
+	TestListSLB(t)
+	TestChangeSLBName(t)
+	TestCreateSLBListener(t)
+	TestGetSLBByUuid(t)
+	TestGetSLBTotalCnt(t)
+	TestListSLBListener(t)
+	TestUpdateSLBListener(t)
+	TestAddSLBMemberToPool(t)
+	TestUpdateSLBMember(t)
+	TestListPoolMembers(t)
+	TestDeleteSLBMember(t)
+	TestDeleteSLBListener(t)
+	TestDeleteSLB(t)
 }

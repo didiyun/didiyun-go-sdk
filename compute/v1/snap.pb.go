@@ -882,7 +882,9 @@ func init() {
 	proto.RegisterType((*ChangeSnapshotNameResponse)(nil), "didi.cloud.compute.v1.ChangeSnapshotNameResponse")
 }
 
-func init() { proto.RegisterFile("compute/v1/snap.proto", fileDescriptor_6ffcef563e4087fa) }
+func init() {
+	proto.RegisterFile("compute/v1/snap.proto", fileDescriptor_6ffcef563e4087fa)
+}
 
 var fileDescriptor_6ffcef563e4087fa = []byte{
 	// 858 bytes of a gzipped FileDescriptorProto
@@ -944,11 +946,11 @@ var fileDescriptor_6ffcef563e4087fa = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // SnapClient is the client API for Snap service.
 //
@@ -969,10 +971,10 @@ type SnapClient interface {
 }
 
 type snapClient struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewSnapClient(cc *grpc.ClientConn) SnapClient {
+func NewSnapClient(cc grpc.ClientConnInterface) SnapClient {
 	return &snapClient{cc}
 }
 

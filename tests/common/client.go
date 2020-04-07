@@ -27,6 +27,7 @@ func InitDicloudClient() *DicloudClient {
 		VpcClient:    compute.NewVpcClient(conn),
 		MonitorClient: monitor.NewMonitorClient(conn),
 		CportClient: compute.NewCportClient(conn),
+		SLBClient: compute.NewSLBClient(conn),
 	}
 }
 
@@ -40,6 +41,7 @@ type DicloudClient struct {
 	compute.SnapClient
 	compute.VpcClient
 	compute.CportClient
+	compute.SLBClient
 	monitor.MonitorClient
 }
 

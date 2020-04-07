@@ -666,7 +666,9 @@ func init() {
 	proto.RegisterType((*DeleteCportResponse)(nil), "didi.cloud.compute.v1.DeleteCportResponse")
 }
 
-func init() { proto.RegisterFile("compute/v1/cport.proto", fileDescriptor_c309c866379f7da8) }
+func init() {
+	proto.RegisterFile("compute/v1/cport.proto", fileDescriptor_c309c866379f7da8)
+}
 
 var fileDescriptor_c309c866379f7da8 = []byte{
 	// 808 bytes of a gzipped FileDescriptorProto
@@ -725,11 +727,11 @@ var fileDescriptor_c309c866379f7da8 = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // CportClient is the client API for Cport service.
 //
@@ -746,10 +748,10 @@ type CportClient interface {
 }
 
 type cportClient struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewCportClient(cc *grpc.ClientConn) CportClient {
+func NewCportClient(cc grpc.ClientConnInterface) CportClient {
 	return &cportClient{cc}
 }
 

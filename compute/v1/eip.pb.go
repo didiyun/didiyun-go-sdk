@@ -1315,7 +1315,9 @@ func init() {
 	proto.RegisterType((*DetachEipFromDc2Response)(nil), "didi.cloud.compute.v1.DetachEipFromDc2Response")
 }
 
-func init() { proto.RegisterFile("compute/v1/eip.proto", fileDescriptor_65548ac4f7ee81f0) }
+func init() {
+	proto.RegisterFile("compute/v1/eip.proto", fileDescriptor_65548ac4f7ee81f0)
+}
 
 var fileDescriptor_65548ac4f7ee81f0 = []byte{
 	// 1182 bytes of a gzipped FileDescriptorProto
@@ -1397,11 +1399,11 @@ var fileDescriptor_65548ac4f7ee81f0 = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // EipClient is the client API for Eip service.
 //
@@ -1428,10 +1430,10 @@ type EipClient interface {
 }
 
 type eipClient struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewEipClient(cc *grpc.ClientConn) EipClient {
+func NewEipClient(cc grpc.ClientConnInterface) EipClient {
 	return &eipClient{cc}
 }
 
