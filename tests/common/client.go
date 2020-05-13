@@ -18,16 +18,16 @@ func InitDicloudClient() *DicloudClient {
 		panic(err)
 	}
 	return &DicloudClient{
-		CommonClient: compute.NewCommonClient(conn),
-		Dc2Client:    compute.NewDc2Client(conn),
-		EipClient:    compute.NewEipClient(conn),
-		EbsClient:    compute.NewEbsClient(conn),
-		SgClient:     compute.NewSgClient(conn),
-		SnapClient:   compute.NewSnapClient(conn),
-		VpcClient:    compute.NewVpcClient(conn),
+		CommonClient:  compute.NewCommonClient(conn),
+		Dc2Client:     compute.NewDc2Client(conn),
+		EipClient:     compute.NewEipClient(conn),
+		EbsClient:     compute.NewEbsClient(conn),
+		SgClient:      compute.NewSgClient(conn),
+		SnapClient:    compute.NewSnapClient(conn),
+		VpcClient:     compute.NewVpcClient(conn),
 		MonitorClient: monitor.NewMonitorClient(conn),
-		CportClient: compute.NewCportClient(conn),
-		SLBClient: compute.NewSLBClient(conn),
+		CportClient:   compute.NewCportClient(conn),
+		SLBClient:     compute.NewSLBClient(conn),
 	}
 }
 
