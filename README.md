@@ -43,16 +43,9 @@ const ServerAddr = "open.didiyunapi.com:8080"
 const Token = "your token" //您的API Token
 
 func main() {
-	perRPC := oauth.NewOauthAccess(&oauth2.Token{
-		AccessToken: Token,
-		TokenType:   "bearer",
-	})
-	//step 1. 获取*grpc.ClientConn。
-	clientConn, err := grpc.Dial(ServerAddr,
-		grpc.WithTransportCredentials(credentials.NewTLS(&tls.Config{})),
-		grpc.WithPerRPCCredentials(perRPC))
+	//step 1. 获取gRPC client
+	clientConn, err := client.GetGRPCClient(Token, ServerAddr)
 	if err != nil {
-		//异常处理
 		panic(err)
 	}
 	//step 2. 获取相应Client。
