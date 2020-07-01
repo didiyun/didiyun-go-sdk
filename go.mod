@@ -1,4 +1,4 @@
-module github.com/hunterwenyu/didiyun-go-sdk
+module github.com/didiyun/didiyun-go-sdk
 
 go 1.13
 
